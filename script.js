@@ -1,6 +1,3 @@
-//Header Toggler Button
-
-
 
 // Pricing Card Tab
 const tabs = document.querySelectorAll('[data-tab-target]');
@@ -21,21 +18,36 @@ tabs.forEach((tab) => {
 
 
 // Accordian 
-const accordian = document.querySelectorAll('.faq__accordian');
+// const accordian = document.querySelectorAll('.faq__accordian');
 
-accordian.forEach((acc) => {
-    acc.addEventListener('click', (e) => {
-        // Toggle between hiding and showing the active panel
+// accordian.forEach((acc) => {
+//     acc.addEventListener('click', (e) => {
+//         // Toggle between hiding and showing the active panel
 
-        let panel = e.target.nextElementSibling;
-        let expandIcon = acc.querySelector('.faq__expand-icon');
+//         let panel = e.target.nextElementSibling;
+//         let expandIcon = acc.querySelector('.faq__expand-icon');
 
-        if (panel.style.display === "none") {
-            panel.style.display = "block";
-            expandIcon.style.display = "none";
-        } else {
-            panel.style.display = "none";
-            expandIcon.style.display = "block";
-        }
+//         if (panel.style.display === "none") {
+//             panel.style.display = "block";
+//             expandIcon.style.display = "none";
+//         } else {
+//             panel.style.display = "none";
+//             expandIcon.style.display = "block";
+//         }
+//     })
+// })
+
+const accordians = document.querySelectorAll('.faq__block');
+console.log(accordians);
+
+accordians.forEach((accord)=> {
+    const btn = accord.querySelector('.faq__action');
+    btn.addEventListener('click', (e)=> {
+        accordians.forEach((item) => {
+            if(item !== accord) {
+                item.classList.remove('show-text');
+            }
+        })
+        accord.classList.toggle('show-text');
     })
 })

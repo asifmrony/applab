@@ -224,6 +224,7 @@ body {
     font-size: 1.6rem;
     color: var(--black);
     margin-bottom: 2.5rem;
+    font-weight: 400;
 }
 
 .trusted-companies .companies img {
@@ -784,8 +785,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: none;
-    outline: none;
     transition: 0.4s;
 }
 
@@ -793,26 +792,21 @@ body {
     background-color: #ececec;
 }
 
-.faq__accordian:focus {
+.faq__expand-icon,
+.faq__shrink-icon {
+    padding: 0.1rem 0.5rem;
+    background-color: #fff;
+    border: 1px solid orange;
+}
+
+.faq__expand-icon:focus,
+.faq__shrink-icon:focus {
     outline: none;
 }
 
 .faq__panel {
     margin-top: 2rem;
     padding: 0 2rem;
-    display: none;
-}
-
-.faq__block--active .faq__expand-icon {
-    display: none;
-}
-
-.faq__block--active .faq__panel {
-    display: block;
-}
-
-.faq__block--active .faq__accordian {
-    font-weight: 700;
 }
 
 .faq__panel p {
@@ -820,6 +814,28 @@ body {
     color: #616161;
     line-height: 1.7;
 }
+
+/* Styles For Javascripts */
+.faq__panel {
+    display: none;
+}
+
+/* .faq__shrink-icon {
+    display: none;
+} */
+
+.show-text .faq__panel {
+    display: block;
+}
+
+/* .show-text .faq__shrink-icon {
+    display: block;
+} */
+
+.show-text .faq__expand-icon {
+    display: none;
+}
+
 
 /********************************
  App Download Section CSS

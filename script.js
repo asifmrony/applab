@@ -17,26 +17,7 @@ tabs.forEach((tab) => {
 })
 
 
-// Accordian 
-// const accordian = document.querySelectorAll('.faq__accordian');
-
-// accordian.forEach((acc) => {
-//     acc.addEventListener('click', (e) => {
-//         // Toggle between hiding and showing the active panel
-
-//         let panel = e.target.nextElementSibling;
-//         let expandIcon = acc.querySelector('.faq__expand-icon');
-
-//         if (panel.style.display === "none") {
-//             panel.style.display = "block";
-//             expandIcon.style.display = "none";
-//         } else {
-//             panel.style.display = "none";
-//             expandIcon.style.display = "block";
-//         }
-//     })
-// })
-
+// Accordian => FAQ
 const accordians = document.querySelectorAll('.faq__block');
 console.log(accordians);
 

@@ -74,6 +74,9 @@ body {
 }
 
 /* Header CSS */
+.header {
+    transition: all 0.6s;
+}
 
 .header__container {
     width: 85%;
@@ -126,6 +129,22 @@ body {
 .header__right .header__btn {
     position: relative;
     margin-left: 2rem;
+}
+
+/* Sticky header */
+.header.sticky {
+    background: #242F51;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 555;
+    color: #fff;
+}
+
+.header.sticky .header__container {
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
 }
 
 /* Hero Section CSS*/
@@ -943,6 +962,9 @@ Responsive media queries
 
 /* Tablet Device width Maximum -991px, Minimum -768px*/
 @media only screen and (max-width: 991px) {
+    .header.sticky .header__container {
+        padding: 2.4rem 0;
+    }
 
     .header__container {
         flex-direction: column;
@@ -952,7 +974,7 @@ Responsive media queries
 
     .header__container .toggler-btn {
         position: absolute;
-        top: 3.2rem;
+        top: 3rem;
         right: 1.6rem;
         display: block;
     }

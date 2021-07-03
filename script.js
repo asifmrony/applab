@@ -1,3 +1,9 @@
+//Sticky navigation Bar
+window.addEventListener('scroll', () => {
+    let header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 300);
+})
+
 
 // Pricing Card Tab
 const tabs = document.querySelectorAll('[data-tab-target]');
@@ -21,11 +27,11 @@ tabs.forEach((tab) => {
 const accordians = document.querySelectorAll('.faq__block');
 console.log(accordians);
 
-accordians.forEach((accord)=> {
+accordians.forEach((accord) => {
     const btn = accord.querySelector('.faq__action');
-    btn.addEventListener('click', (e)=> {
+    btn.addEventListener('click', (e) => {
         accordians.forEach((item) => {
-            if(item !== accord) {
+            if (item !== accord) {
                 item.classList.remove('show-text');
             }
         })

@@ -3,11 +3,10 @@
 Applab is a modern landing page template designed by **[Slab Design](https://dribbble.com/slabdsgn)**. This template follows Modern frontend architecture and Semantic HTML code for SEO optimization. You Can customize and spice it as the requirement fits.  
 
 
-Live Demo: 
+Live Demo: <https://showlab.netlify.app/>
 
 
 ### Key Features:
-_________________________
 
 * HTML5 & CSS3 & Vanilla Javascript
 * Fully Responsive
@@ -24,11 +23,13 @@ _________________________
 * Font Awesome icons
 
 #### Libraries & Plugins:
+
 * Bootstrap 4
 * Font Awesome 5
 
 
 #### File Includes:
+
 * All demo Images
 * HTML file
 * CSS File

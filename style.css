@@ -948,6 +948,10 @@ body {
     font-size: 1.2rem;
 }
 
+.footer__copyright a {
+    color: #ffffff91;
+}
+
 /*----------------------------
 Responsive media queries
 ------------------------------*/

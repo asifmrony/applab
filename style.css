@@ -1061,11 +1061,19 @@ body {
 Responsive media queries
 ------------------------------*/
 /* Tablet Device width Maximum -1199px, Minimum -992px*/
-@media only screen and (max-width: 1199px) {}
+@media only screen and (max-width: 1199px) {
+    .client-review {
+        min-height: 310px;
+    }
+}
 
 @media only screen and (max-width: 1039px) {
     .header__container {
         width: 85%;
+    }
+
+    .client-review {
+        min-height: 325px;
     }
 }
 
@@ -1200,6 +1208,10 @@ Responsive media queries
         padding: 12rem 0 14rem;
     }
 
+    .slider-btn {
+        padding: 0.2rem 0.8rem;
+    } 
+
 }
 
 /* Mobile Device width Maximum -767px, Minimum -576px*/
@@ -1298,6 +1310,10 @@ Responsive media queries
         padding: 1rem 0 32rem;
     }
 
+    .client-review {
+        min-height: 243px;
+    }
+
     .app-download__bg-wrap {
         background-position: bottom;
     }
@@ -1321,6 +1337,10 @@ Responsive media queries
 @media only screen and (max-width: 675px) {
     html {
         font-size: 8px;
+    }
+
+    .client-review {
+        min-height: 235px;
     }
 
 }
@@ -1357,6 +1377,10 @@ Responsive media queries
 
     .card-btn {
         padding: 0.8rem 2rem;
+    }
+
+    .client-review {
+        min-height: 268px;
     }
 
 }

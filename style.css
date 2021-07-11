@@ -18,7 +18,9 @@
     paragaraph-text: 16px;
 }
 
-/* RESET */
+/********
+ RESET
+ ********/
 *,
 *::before,
 *::after {
@@ -33,7 +35,9 @@ ul {
     list-style: none;
 }
 
-/* Responsive font  */
+/*****************
+ Responsive font
+******************  */
 html {
     font-size: 10px;
 }
@@ -44,7 +48,9 @@ body {
     line-height: 1.6;
 }
 
-/* Resusable Classes */
+/*********************
+ Resusable Classes
+********************** */
 
 .ru-btn {
     display: inline-block;
@@ -73,7 +79,9 @@ body {
     font-weight: 600;
 }
 
-/* Header CSS */
+/*********************
+ Header CSS
+********************** */
 .header {
     transition: all 0.6s;
 }
@@ -131,7 +139,9 @@ body {
     margin-left: 2rem;
 }
 
-/* Sticky header */
+/*********************
+ Sticky Header
+********************** */
 .header.sticky {
     background: #242F51;
     position: fixed;
@@ -147,7 +157,9 @@ body {
     padding-bottom: 1.4rem;
 }
 
-/* Hero Section CSS*/
+/*********************
+ Hero Section CSS
+********************** */
 
 .hero {
     height: calc(100vh - 9.3rem);
@@ -227,8 +239,9 @@ body {
     transform: scale(1.3);
 }
 
-/*Trusted Companies Section CSS*/
-
+/******************************
+ Trusted Companies Section CSS
+******************************* */
 .trusted-companies {
     width: 70%;
     margin: 0 auto;
@@ -250,8 +263,9 @@ body {
     padding: 1rem 2rem;
 }
 
-/* App Features Section CSS*/
-
+/******************************
+ App Features Section CSS
+******************************* */
 .app-features {
     width: 80%;
     margin: 0 auto;
@@ -341,7 +355,9 @@ body {
     color: var(--green);
 }
 
-/* Smart Jackpots CSS */
+/******************************
+ Smart jackpot CSS
+******************************* */
 .smart-jackpot {
     padding: 6rem 0;
 }
@@ -381,7 +397,7 @@ body {
     left: 0;
 }
 
-/* Jackpot Services CSS */
+/*------- Jackpot Services CSS-------- */
 .jackpot-services {
     padding: 4rem 0;
 }
@@ -433,7 +449,9 @@ body {
     color: var(--grey);
 }
 
-/* Code Integration CSS */
+/**************************
+ Code Integration CSS
+*************************** */
 .code-integration {
     padding: 4rem 0;
 }
@@ -462,7 +480,9 @@ body {
     margin: 2rem 0;
 }
 
-/* Pricing Section CSS */
+/**************************
+ Pricing Section CSS
+*************************** */
 .pricing {
     padding: 7rem 0;
 }
@@ -482,7 +502,7 @@ body {
     font-size: 1.5rem;
 }
 
-/* Pricing button */
+/*-------- Pricing button -------- */
 .pricing-buttons {
     margin: 4rem 0 3rem;
     display: inline-block;
@@ -508,7 +528,7 @@ body {
     color: #fff;
 }
 
-/* Price Card */
+/*---------- Price Card ---------- */
 .pricing-cards {}
 
 .monthly-plans,
@@ -591,7 +611,7 @@ body {
     font-weight: 500;
 }
 
-/* Classes for JS Processing */
+/*---------- Classes for JS Processing------- */
 [data-tab-content] {
     display: none;
 }
@@ -622,7 +642,7 @@ body {
 }
 
 .testimonial__content-wrap {
-    background-color: rgba(255, 255, 255, 0.527);
+    background-color: rgba(255, 255, 255, 0.76);
     display: flex;
 }
 
@@ -642,6 +662,38 @@ body {
 .testimonial__right-subheading {
     margin: 2rem 0;
 }
+
+/*------Client Review Slider CSS--------- */
+.client-review {
+    position: relative;
+    min-height: 292px;
+    overflow: hidden;
+}
+
+.client-review__slide {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Manual Setup For Slide */
+/* .client-review__slide:nth-child(1) {
+    left: 0;
+}
+
+.client-review__slide:nth-child(2) {
+    left: 100%;
+}
+
+.client-review__slide:nth-child(3) {
+    left: 200%;
+} */
+
+/* .client-review__slide {
+    transform: translate(-200%);
+} */
+/* End Manual Setup */
 
 .client-review__ratings {
     font-size: 1.5rem;
@@ -666,6 +718,39 @@ body {
 
 .client-review__client-name {
     font-weight: 700;
+}
+
+.client-review-buttons {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+.slider-btn {
+    padding: 0.5rem 1.2rem;
+    background-color: #fff;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(68, 68, 68, 0.300);
+    transition: all 250ms ease-in-out;
+}
+
+.slider-btn i {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.slider-btn:hover {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+}
+
+.slider-btn:focus {
+    outline: none;
+}
+
+.slider-btn:last-child {
+    margin-left: 1rem;
 }
 
 /* Default Setting for all testimonial images */
@@ -762,8 +847,10 @@ body {
 
 .client-review__client-image img {
     width: 100%;
+    height: 100%;
+    /* transform: scale(1.2);
     height: auto;
-    margin-top: -8px;
+    margin-top: -8px; */
 }
 
 /********************************
@@ -814,8 +901,15 @@ body {
 .faq__expand-icon,
 .faq__shrink-icon {
     padding: 0.1rem 0.5rem;
-    background-color: #fff;
-    border: 1px solid orange;
+    background-color: transparent;
+    border: none;
+    transition: all 0.35s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.faq__expand-icon:hover,
+.faq__shrink-icon:hover {
+    transform: rotate(45deg);
 }
 
 .faq__expand-icon:focus,
@@ -845,6 +939,7 @@ body {
 
 .show-text .faq__panel {
     display: block;
+    animation: move-in-top 100ms ease-out;
 }
 
 /* .show-text .faq__shrink-icon {
@@ -855,6 +950,16 @@ body {
     display: none;
 }
 
+@keyframes move-in-top {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
 
 /********************************
  App Download Section CSS

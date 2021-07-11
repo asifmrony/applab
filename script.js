@@ -25,7 +25,6 @@ tabs.forEach((tab) => {
 
 // Accordian => FAQ
 const accordians = document.querySelectorAll('.faq__block');
-console.log(accordians);
 
 accordians.forEach((accord) => {
     const btn = accord.querySelector('.faq__action');
@@ -38,3 +37,56 @@ accordians.forEach((accord) => {
         accord.classList.toggle('show-text');
     })
 })
+
+
+// Testimonial Carousel
+//Select Dom elements
+const slides = document.querySelectorAll(".client-review__slide");
+const prevBtn = document.querySelector('.prevBtn');
+const nextBtn = document.querySelector('.nextBtn');
+
+slides.forEach((slide, index) => {
+    slide.style.left = `${index * 100}%`;
+})
+
+let counter = 0;
+
+nextBtn.addEventListener('click', () => {
+    counter++;
+    carousel();
+})
+
+prevBtn.addEventListener('click', () => {
+    counter--;
+    carousel();
+})
+
+function carousel() {
+    //working with slides
+    // if (counter === slides.length) {
+    //     counter = 0;
+    // }
+
+    // if (counter < 0) {
+    //     counter = slides.length - 1;
+    // }
+
+    //working with prevNext button - shows or hide
+    if (counter < slides.length - 1) {
+        nextBtn.style.display = 'inline';
+    } else {
+        nextBtn.style.display = 'none'
+    }
+
+    if (counter > 0) {
+        prevBtn.style.display = 'inline';
+    } else {
+        prevBtn.style.display = 'none';
+    }
+
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(-${counter * 100}%)`;
+    })
+}
+
+prevBtn.style.display = 'none';
